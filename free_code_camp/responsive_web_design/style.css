@@ -1,6 +1,5 @@
 /* BASE|===================================== */
 html, body {
-    font-family: 'Work Sans', sans-serif;
     background-color: var(--margin-bg-color);
     color: var(--dark-fg-color);
     margin: 0;
@@ -8,6 +7,8 @@ html, body {
 }
 
 main {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 14pt;
     max-width: 1000px;
     margin: auto;
 }
@@ -53,6 +54,7 @@ a:visited {
 
 /* SECTIONS|================================= */
 section {
+    display: block;
     padding: 1em 2em;
 }
 
@@ -64,7 +66,7 @@ section {
     margin-bottom: 0;
 }
 
-@media (min-width: 6in) {
+@media (min-width: 1000px) {
     section {
 	margin: 2em;
 	border-radius: 1em;
