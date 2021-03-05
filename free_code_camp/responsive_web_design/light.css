@@ -1,0 +1,11 @@
+@media (prefers-color-scheme: light) {
+    :root {
+	--light-fg-color: #333;
+	--light-bg-color: #C9ECFF;
+	--dark-bg-color: #90CEFF;
+	--margin-bg-color: #FFF;
+	--dark-fg-color: #222;
+	--link-color: #22F;
+	--visited-link-color:#119
+    }
+}

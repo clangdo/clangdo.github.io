@@ -1,0 +1,42 @@
+.number-breakdown {
+    padding: 1em;
+    border-radius: 1em;
+    display: grid;
+    gap: 0.2em;
+}
+
+.number-breakdown p {
+    border-radius: 0.2em;
+    margin: 0;
+    padding: 0.2em;
+    text-align: center;
+}
+
+.light .center .number-breakdown {
+    background-color: var(--light-bg-color);
+}
+
+.light .center .number-breakdown p {
+    background-color: var(--dark-bg-color);
+}
+
+.dark .center .number-breakdown {
+    background-color: var(--light-bg-color);
+}
+
+.dark .center .number-breakdown p {
+    background-color: var(--dark-bg-color);
+}
+
+.decimal {
+    grid-template: auto auto / repeat(9, min-content);
+}
+
+.binary {
+    grid-template: auto auto / repeat(15, min-content);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}

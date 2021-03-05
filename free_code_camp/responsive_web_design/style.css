@@ -1,0 +1,95 @@
+/* BASE|===================================== */
+html, body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--margin-bg-color);
+    color: var(--dark-fg-color);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0.25em;
+    text-align: center;
+}
+
+/* IMAGES|=================================== */
+figure {
+    margin: 1em 0;
+}
+
+figcaption {
+    color: var(--light-fg-color);
+    text-align: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 1em;
+}
+
+/* CARD COLORS|============================== */
+.light {
+    background-color: var(--light-bg-color);
+}
+
+.dark {
+    background-color: var(--dark-bg-color);
+}
+
+/* LINK COLORs|============================== */
+a {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--visited-link-color);
+}
+
+/* SECTIONS|================================= */
+section {
+    padding: 1em 2em;
+}
+
+#first-section {
+    margin-top: 0;
+}
+
+#last-section {
+    margin-bottom: 0;
+}
+
+@media (min-width: 6in) {
+    section {
+	margin: 2em;
+	border-radius: 1em;
+    }
+    
+    #first-section {
+	margin-top: 2em;
+    }
+
+    #last-section {
+	margin-bottom: 2em;
+    }
+}
+
+/* VIDEO|==================================== */
+.youtube {
+    margin: auto;
+    flex-align: center;
+    max-width: 540px;
+    max-height: 360px;
+    object-position: center center;
+    object-fit: contain;
+}
+
+.video {
+    display: flex;
+}
+

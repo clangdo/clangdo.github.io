@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>The Wonders of Binary</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../dark.css">
+    <link rel="stylesheet" href="../light.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="math.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500">
+  </head>
+  <body>
+    <main id="main">
+      <section id="first-section" class="dark">
+	<h1 id="title">The Wonders of Binary</h1>
+	<div id="img-div">
+	  <figure>
+	    <img id="image"
+		 src="images/binary_in_binary.jpg"
+		 alt="Some ones and zeroes, with spaces every four digits. 
+		      Specifically: 0110 0011 0110 1001 0110 1110 0110
+		      0001 0111 0010 0111 1001"></img>
+	    <figcaption id="img-caption">
+	      The string "binary" in ASCII/UTF-8 (without a null terminator)
+	    </figcaption>
+	  </figure>
+	</div>
+      </section>
+      <section id="tribute-info" class="light">
+	<h2>Why is binary important?</h2>
+	<p>
+	  Long ago computers were known as
+	  "<a href="https://en.wikipedia.org/wiki/Difference_engine">differencing
+	  engines</a>" because they found the differences between
+	  various inputs. In these first of computers the inputs and
+	  outputs to the machine were all provided and manipulated by
+	  ingenious mechanical contraptions. They used cams and cogs
+	  and worm gears to perform mathematical operations on the
+	  inputs, and spit them out in some readable form. With the
+	  introduction of the transistor though, building mechanical
+	  contraptions for every operation became more trouble than it
+	  was worth. The transistor is a powerful tool because it
+	  allows a circuit designer to switch a circuit on and off
+	  with another circuit! Even early transistors quickly had the
+	  advantage in size over their analog mechanical brethren. So
+	  the digital computer was born.
+	</p>
+	<p>
+	  Let's back up for a second, what does "digital" mean? It
+	  means simply something based on digits! See? "Digit" is even
+	  in the word <b>digit</b>al. It's often used to differentiate
+	  computing devices and recording media from their "analog"
+	  counterparts. So what does analog mean? It specifies
+	  something mimics it's input naturally, with all the possible
+	  states that input could have. You can see how the old
+	  camshafts and cogs did that by watching this video:
+	</p>
+	<div class="video">
+	  <iframe class="youtube"
+		  width="962"
+		  height="740"
+		  src="https://www.youtube.com/embed/_8aH-M3PzM0?start=130&end=374"
+		  frameborder="0"
+		  allow="clipboard-write;
+			 encrypted-media;
+			 picture-in-picture"
+		  allowfullscreen>
+	</iframe>
+	</div>
+	<p>
+	  But wait, if I have an analog computer that operates exactly
+	  on my inputs, why is a digital computer that only
+	  approximates them with numbers better? It all comes down to
+	  size. Transistors are tiny (especially today), while gears
+	  and cams are large by necessity. Remember, it's not just
+	  that they have to work, it's also that they have to work for
+	  a long time and not wear down too much! Plus it's far more
+	  complex to route numbers around a mechanical assembly. You
+	  saw that it was fairly easy to add two inputs together, but
+	  think about adding hundreds! Pretty complex, right?
+	</p>
+	<p>
+	  Okay but what does this have to do with binary? Well the
+	  transistor is basically a switch, it's either on or off, and
+	  while detecting and creating more possible voltages on the
+	  wire is doable, the pair of digit values (0 and 1) that are
+	  possible in binary naturally fit the "on/off" state of a
+	  single transistor. If you put multiple transistors together
+	  then you can just treat them individually as binary digits!
+	  And that paves the way for you to represent any number
+	  expressible with the digits (transistors) you have
+	  available!
+	</p>
+	<p>
+	  So without binary, computers may never have moved past their
+	  gargantuan mechanical antecedents, and you might not be able
+	  to read this right now!
+	</p>
+	<p>
+	  For more information on the history of binary, please visit
+	  its <a id="tribute-link" target="_blank"
+	  href="https://en.wikipedia.org/wiki/Binary_code">wikipedia
+	  page</a> or the one
+	  on <a href="https://en.wikipedia.org/wiki/Transistor">transistors</a>,
+	  or do some searching with your favorite search engine!
+      </section>
+      <section class="dark">
+	<h2>So how does it work?</h2>
+	<p>
+	  The easiest way to explain binary is to show you! So that's
+	  what I'll do. Below, you can see the way a base two (binary)
+	  number is a lot like our base ten numbers that we use all the
+	  time.
+	</p>
+
+	<h3>A base ten primer</h3>
+	<p> First let's look at how a "normal" number looks, and break
+	  it down. This might remind you of a class you took really
+	  early on, where you first learned about the place values for
+	  numbers! The number I'm looking at is 1,423, which happens to
+	  be the first prime number with 1, 2, 3, and 4 among its
+	  digits.
+	</p>
+	<div class="center">
+	  <div class="number-breakdown decimal">
+	    <p>1</p> <sp></sp> <p>4</p> <sp></sp> <p>2</p> <sp></sp> <p>3</p> <sp></sp> <sp></sp>
+	    <p>×</p> <sp></sp> <p>×</p> <sp></sp> <p>×</p> <sp></sp> <p>×</p> <sp></sp> <sp></sp>
+	    <p>10<sup>3</sup></p> <sp></sp> <p>10<sup>2</sup></p> <sp></sp> <p>10<sup>1</sup></p> <sp></sp> <p>10<sup>0</sup></p> <sp></sp> <sp></sp>
+	    <p>=</p> <sp></sp> <p>=</p> <sp></sp> <p>=</p> <sp></sp> <p>=</p> <sp></sp> <sp></sp>
+	    <p>1000</p> <p>+</p> <p>400</p> <p>+</p> <p>20</p> <p>+</p> <p>3</p> <p>=</p> <p>1423</p>
+	  </div>
+	</div>
+	<p>
+	  See? In order to get to a base ten number, we multiply
+	  each digit by the <it>power</it> of ten that corresponds to
+	  its place value. Then we add all the results up! You probably
+	  do this intuitively by now whenever you think of a number, but
+	  believe it or not you once had to learn how to do this!
+	</p>
+	<h3>The binary 'b'</h3>
+	<p>
+	  Now let's look at a binary number and see how it can convey
+	  the same thing. We'll convert it to base 10 so you can see
+	  that the numbers are the same. The binary number will be the
+	  ASCII code for the character 'b' in honor of
+	  binary. <a href="https://en.wikipedia.org/wiki/Ascii">ASCII</a>
+	  is a standard way of representing characters with numbers. It
+	  says 'b' is the number 110&nbsp;0010 (The separation every four
+	  digits is just for readability, kinda like the comma every
+	  three digits in decimal). Anyway, let's see if we can tell
+	  what this is in decimal by applying a similar technique to
+	  above.
+	</p>
+	<div class="center">
+	  <div class="number-breakdown binary">
+	    <!-- row 1 -->
+	    <p>1</p> <sp></sp> <p>1</p> <sp></sp> <p>0</p> <sp></sp> <p>0</p> <sp></sp> <p>0</p> <sp></sp> <p>1</p> <sp></sp> <p>0</p> <sp></sp> <sp></sp>
+	    <!-- row 2 -->
+	    <p>×</p> <sp></sp> <p>×</p> <sp></sp> <p>×</p> <sp></sp> <p>×</p> <sp></sp>
+	    <p>×</p> <sp></sp> <p>×</p> <sp></sp> <p>×</p> <sp></sp> <sp></sp>
+	    <!-- row 3 -->
+	    <p>2<sup>6</sup></p> <sp></sp> <p>2<sup>5</sup></p> <sp></sp> <p>2<sup>4</sup></p> <sp></sp>
+	    <p>2<sup>3</sup></p> <sp></sp> <p>2<sup>2</sup></p> <sp></sp> <p>2<sup>1</sup></p> <sp></sp> <p>2<sup>0</sup></p> <sp></sp> <sp></sp>
+	    <!-- row 4 -->
+	    <p>=</p> <sp></sp> <p>=</p> <sp></sp> <p>=</p> <sp></sp> <p>=</p> <sp></sp>
+	    <p>=</p> <sp></sp> <p>=</p> <sp></sp> <p>=</p> <sp></sp> <sp></sp>
+	    <!-- row 5 -->
+	    <p>64</p> <p>+</p> <p>32</p> <p>+</p> <p>0</p> <p>+</p> <p>0</p> <p>+</p> <p>0</p> <p>+</p> <p>2</p> <p>+</p> <p>0</p> <p>=</p> <p>98</p>
+	  </div>
+	</div>
+	<p>
+	  So yeah, we need a lot more digits for a given number
+	  because now each place value is multiplied by a power of
+	  two, not ten, but it's not too bad, most modern processors
+	  deal with numbers 32, 64, or even more digits long! These
+	  numbers can get pretty big (up to 1×10<sup>19</sup> for 64
+	  digit positive numbers, and that's a one with 19 zeroes
+	  after it!).
+	</p>
+      </section>
+      <section id="last-section" class="light">
+	<h2>Parting Words</h2>
+	<p>
+	  This page is totally open source and hosted on
+	  my <a href="https://github.com/clangdo">GitHub</a>. Check it
+	  out if you're interested.
+	</p>
+	<p>
+	  I hope you enjoyed this journey
+	  through the basics of binary. Happy computing!
+	</p>
+	<p>
+	  -clangdo
+	</p>
+      </section>
+    </main>
+  </body>
+</html>
