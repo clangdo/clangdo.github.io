@@ -37,6 +37,6 @@
 
 .breakdown-container {
     border-radius: 1em;
-    margin: auto;
+    display: flex;
     overflow-x: scroll;
 }
