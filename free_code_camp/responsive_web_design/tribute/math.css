@@ -1,6 +1,5 @@
 .number-breakdown {
     padding: 1em;
-    border-radius: 1em;
     display: grid;
     gap: 0.2em;
 }
@@ -12,20 +11,20 @@
     text-align: center;
 }
 
-.light .center .number-breakdown {
+.light .breakdown-container {
     background-color: var(--light-bg-color);
 }
 
-.light .center .number-breakdown p {
+.dark .breakdown-container .number-breakdown p {
     background-color: var(--dark-bg-color);
 }
 
-.dark .center .number-breakdown {
+.dark .breakdown-container {
     background-color: var(--light-bg-color);
 }
 
-.dark .center .number-breakdown p {
-    background-color: var(--dark-bg-color);
+.light .breakdown-container .number-breakdown p {
+    background-color: var(--light-bg-color);
 }
 
 .decimal {
@@ -36,7 +35,8 @@
     grid-template: auto auto / repeat(15, min-content);
 }
 
-.center {
-    display: flex;
-    justify-content: center;
+.breakdown-container {
+    border-radius: 1em;
+    margin: auto;
+    overflow-x: scroll;
 }
