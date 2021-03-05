@@ -40,3 +40,9 @@
     display: flex;
     overflow-x: scroll;
 }
+
+@media (min-width: 600px) {
+    .breakdown-container {
+	overflow-x: visible;
+    }
+}
