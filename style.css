@@ -1,0 +1,81 @@
+:root {
+    --bg-color: #DDD;
+    --dark-bg-color: #EFDFC9;
+    --light-bg-color: #FFFADF;
+    --lighter-bg-color: #FFFDEF;
+    --fg-color: #224;
+    --highlight-color: #128;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+main {
+    max-width: 1000px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.inline-text-list {
+    list-style-type: none;
+}
+
+@keyframes bubble-down {
+    0% {
+	transform: translate(0, -5rem);
+	opacity: 0;
+    }
+
+    100% {
+	transform: translate(0, 0);
+	opacity: 1.0;
+    }
+}
+
+@keyframes bubble-right {
+    0% {
+	transform: translate(-5rem, 0);
+	opacity: 0;
+    }
+
+    100% {
+	transform: translate(0, 0);
+	opacity: 1.0;
+    }
+}
+
+.boxed-block {
+    background-color: var(--dark-bg-color);
+    border: medium solid var(--fg-color);
+    border-radius: 2em;
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.boxed-block:hover {
+    background-color: var(--light-bg-color);
+}
+
+.bubble-down {
+    overflow: hidden;
+    animation: 0.5s ease-in-out 0s 1 normal none running bubble-down;
+}
+
+.bubble-right {
+    overflow: hidden;
+    animation: 0.5s ease-in-out 0s 1 normal none running bubble-right;
+}
