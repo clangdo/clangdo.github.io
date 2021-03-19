@@ -1,17 +1,15 @@
 :root {
-    --bg-color: #DDD;
-    --dark-bg-color: #EFDFC9;
-    --light-bg-color: #FFFADF;
-    --lighter-bg-color: #FFFDEF;
-    --fg-color: #224;
+    --backdrop-bg-color: #AAA;
+    --content-bg-color: #DDD;
+    --content-fg-color: #222;
     --highlight-color: #128;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--fg-color);
+    background-color: var(--backdrop-bg-color);
+    color: var(--content-fg-color);
     font-family: sans-serif;
     width: 100%;
     height: 100%;
@@ -29,13 +27,59 @@ article {
     flex-direction: column;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .inline-text-list {
     list-style-type: none;
+}
+
+.boxed-block {
+    background-color: var(--content-bg-color);
+    border: medium solid var(--content-fg-color);
+    border-radius: 2em;
+    margin: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+/* Bubble Animations|------------------------------------------- */
+
+.bubble {
+    overflow: hidden;
+    animation: 0.3s ease-in-out 0s 1 normal none running bubble-right;
+}
+
+.bubble-down {
+    animation-name: bubble-down;
+}
+
+.bubble-left {
+    animation-name: bubble-left;
+}
+
+.bubbleright {
+    animation-name: bubble-right;
 }
 
 @keyframes bubble-down {
     0% {
 	transform: translate(0, -5rem);
+	opacity: 0;
+    }
+
+    100% {
+	transform: translate(0, 0);
+	opacity: 1.0;
+    }
+}
+
+@keyframes bubble-left {
+    0% {
+	transform: translate(5rem, 0);
 	opacity: 0;
     }
 
@@ -57,25 +101,7 @@ article {
     }
 }
 
-.boxed-block {
-    background-color: var(--dark-bg-color);
-    border: medium solid var(--fg-color);
-    border-radius: 2em;
-    margin: 1rem;
-    padding: 0.5rem 2rem;
-    transition: background-color 0.5s ease-in-out;
-}
-
-.boxed-block:hover {
-    background-color: var(--light-bg-color);
-}
-
-.bubble-down {
-    overflow: hidden;
-    animation: 0.5s ease-in-out 0s 1 normal none running bubble-down;
-}
-
-.bubble-right {
-    overflow: hidden;
-    animation: 0.5s ease-in-out 0s 1 normal none running bubble-right;
+#header-avatar {
+    width: 4em;
+    height: 4em;
 }
